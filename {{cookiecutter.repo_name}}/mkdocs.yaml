@@ -1,0 +1,44 @@
+site_name: "{{cookiecutter.repo_name}}"
+docs_dir: "./{{cookiecutter.repo_name}}/"
+
+theme:
+  name: "material"
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: "{{cookiecutter.primary_color}}"
+      accent: "{{cookiecutter.accent_color}}"
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: "{{cookiecutter.primary_color}}"
+      accent: "{{cookiecutter.accent_color}}"
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+# Extensions
+markdown_extensions:
+  - def_list
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - offline
+  - roamlinks
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js

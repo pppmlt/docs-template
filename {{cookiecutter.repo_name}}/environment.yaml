@@ -1,0 +1,10 @@
+name: "{{cookiecutter.env_name}}"
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - mkdocs
+  - mkdocs-material>=9.1
+  - pip
+  - pip:
+      - mkdocs-roamlinks-plugin
