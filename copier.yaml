@@ -1,0 +1,75 @@
+# configurable parameters
+docs_topic:
+  type: str
+  help: Topic of the documentation
+  default: abc
+vault_name:
+  type: str
+  help: Name of the vault folder inside of the repository
+  default: "((( docs_topic.replace(' ', '-') )))-docs"
+env_name:
+  type: str
+  help: Name of the environment
+  default: "((( docs_topic.replace(' ', '-') )))-docs-env"
+primary_color:
+  type: str
+  help: Primary color for the mkdocs theme
+  choices:
+    - red
+    - pink
+    - purple
+    - deep purple
+    - indigo
+    - blue
+    - light blue
+    - cyan
+    - teal
+    - green
+    - light green
+    - lime
+    - yellow
+    - amber
+    - orange
+    - deep orange
+    - brown
+    - grey
+    - blue grey
+    - black
+    - white
+accent_color:
+  type: str
+  help: Accent color for the mkdocs theme
+  choices:
+    - red
+    - pink
+    - purple
+    - deep purple
+    - indigo
+    - blue
+    - light blue
+    - cyan
+    - teal
+    - green
+    - light green
+    - lime
+    - yellow
+    - amber
+    - orange
+    - deep orange
+    - brown
+    - grey
+    - blue grey
+    - black
+    - white
+# tasks executed by copier:
+_tasks:
+  - "git init"
+  - "git add ."
+  - "git commit -m 'feat: initialize from docs-template version (((_copier_answers._commit)))'"
+# copier settings:
+_subdirectory: template
+_templates_suffix: ""
+_answers_file: ".copier_answers.yaml"
+_envops:
+  variable_end_string: ")))"
+  variable_start_string: "((("
