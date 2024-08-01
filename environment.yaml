@@ -1,8 +1,0 @@
-name: docs-template
-channels:
-  - conda-forge
-dependencies:
-  - python=3.10
-  - cookiecutter>=2.1
-  - prettier
-  - pre-commit
