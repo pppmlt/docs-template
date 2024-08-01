@@ -12,7 +12,7 @@ cookiecutter https://github.com/pppmlt/docs-template
 
 - prequisites:
   - `python` (>=3.8)
-  - `uv` (test with 0.2.32)
+  - `uv` (tested with 0.2.32)
 - setup
 ``` shell
 git clone https://github.com/pppmlt/docs-template
