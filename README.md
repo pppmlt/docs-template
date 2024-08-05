@@ -1,11 +1,11 @@
 # Docs-Template
 
-Cookiecutter template to create documentation with obsidian and mkdocs.
+Copier template to create documentation with obsidian and mkdocs.
 
 ### Usage
 
 ```
-cookiecutter https://github.com/pppmlt/docs-template
+copier copy https://github.com/pppmlt/docs-template [DESTINATION]
 ```
 
 ### Development setup
